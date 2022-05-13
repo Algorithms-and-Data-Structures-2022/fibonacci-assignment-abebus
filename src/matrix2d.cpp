@@ -24,6 +24,14 @@ namespace assignment {
     while (power != 0) {
 
       // Напишите здесь свой код ...
+      if (power % 2 != 0) {
+        res = matrix_multiply(res, matrix);
+        power--;
+      }
+      else {
+        matrix = matrix_multiply(matrix, matrix);
+        power = power/2;
+      }
     }
 
     return res;
